@@ -1,0 +1,93 @@
+.main {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.Section {
+    /* MAX */
+    margin-top: 120px;
+    margin-bottom: 180px;
+    /* 10vw at 900px -> 900 * 0.1 = 90 */
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    /* LOWER = min-width, UPPER = max-width */
+    /* MINpx + (MAX - MIN) * (100vw - LOWERpx) / (UPPER - LOWER) */
+    /* change calc formulas manually if any parameters change */
+
+    .Section {
+        margin-top: calc(60px + (120 - 60) * (100vw - 600px) / (900 - 600));
+        margin-bottom: calc(90px + (180 - 90) * (100vw - 600px) / (900 - 600));
+        margin-right: calc(90 * (100vw - 600px) / (900 - 600));
+        margin-left: calc(90 * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Section {
+        /* MIN */
+        margin-top: 60px;
+        margin-bottom: 90px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.Section_title {
+    font-family: 'Baumans', monospace;
+    font-weight: normal;
+    text-align: center;
+    /* MAX */
+    font-size: 6vw;
+    margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Section_title {
+        font-size: calc(41px + (54 - 41) * (100vw - 600px) / (900 - 600));
+        margin-bottom: calc(20px + (40 - 20) * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Section_title {
+        /* MIN */
+        font-size: 41px;
+        margin-bottom: 20px;
+    }
+}
+
+.Section_subtitle {
+    font-weight: normal;
+    text-align: center;
+    /* MAX */
+    /* 3vw at 900px -> 900 * 0.03 = 27px */
+    font-size: 3vw;
+    margin-bottom: 60px;
+    margin-right: 3vw;
+    margin-left: 3vw;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    /* LOWER = min-width, UPPER = max-width */
+    /* MINpx + (MAX - MIN) * (100vw - LOWERpx) / (UPPER - LOWER) */
+    /* change calc formulas manually if any parameters change */
+    .Section_subtitle {
+        font-size: calc(25px + (27 - 25) * (100vw - 600px) / (900 - 600));
+        margin-bottom: calc(30px + (60 - 30) * (100vw - 600px) / (900 - 600));
+        margin-right: calc(27 * (100vw - 600px) / (900 - 600));
+        margin-left: calc(27 * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Section_subtitle {
+        /* MIN */
+        font-size: 25.5px;
+        margin-bottom: 30px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
