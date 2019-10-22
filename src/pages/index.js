@@ -1,29 +1,34 @@
-import React from "react";
+// @flow
 
-import { graphql } from 'gatsby';
-import App from "../components/App";
+import React from 'react'
+import { graphql } from 'gatsby'
+import App from '../components/App'
+import type { AppTypes } from '../types.js'
 
-const IndexPage = ({ data }) => (
-    <App
-    data={data}
-    ></App>
-)
+type Props = {
+  data: AppTypes,
+}
 
-export default IndexPage;
+const IndexPage = ({ data }: Props) => <App data={data}></App>
+
+export default IndexPage
 
 export const query = graphql`
-{
+  {
     contentfulSeo {
-       id
+      id
     }
     contentfulIndex {
+      id
+      header {
         id
-        header {
-            id
-        }
-        main {
-            id
-        }
+      }
+      main {
+        id
+      }
+      footer {
+        id
+      }
     }
-}
+  }
 `

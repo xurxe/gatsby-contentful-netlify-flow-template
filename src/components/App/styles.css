@@ -1,21 +1,21 @@
 :root {
-    --purple: hsl(270, 50%, 50%);
-    color: var(--purple);
-    font-size: 20px;
+  --purple: hsl(270, 50%, 50%);
+  color: var(--purple);
+  font-size: 20px;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 .whiteText {
-    color: white;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -o-font-smoothing: antialiased;
+  color: white;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
 }
