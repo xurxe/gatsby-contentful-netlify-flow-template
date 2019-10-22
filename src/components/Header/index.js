@@ -1,20 +1,22 @@
-import React from 'react';
-import './styles.css';
+// @flow
 
-const Header = ({ header }) => {
+import React from 'react'
+import './styles.css'
+import type { HeaderTypes } from '../../types.js'
 
-    const { id } = header;
+type Props = {
+  data: HeaderTypes,
+}
+const Header = ({ data }: Props) => {
+  const { id } = data
 
-    const jsx = (
-        <header
-        className='Header'
-        >
-            <p>Header: {id}</p>
-        </header>
+  const jsx = (
+    <header className="Header">
+      <p>Header: {id}</p>
+    </header>
+  )
 
-    )
-
-    return jsx;
+  return jsx
 }
 
-export default Header;
+export default Header

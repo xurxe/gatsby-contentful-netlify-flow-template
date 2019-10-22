@@ -1,19 +1,23 @@
-import React from 'react';
-import './styles.css';
+// @flow
 
-const Main = ({ main }) => {
+import React from 'react'
+import './styles.css'
+import type { MainTypes } from '../../types.js'
 
-    const { id } = main;
-    
-    const jsx = (
-        <main
-        className='main'
-        >
-            <p>Main: {id}</p>
-        </main>
-    )
-
-    return jsx;
+type Props = {
+  data: MainTypes,
 }
 
-export default Main;
+const Main = ({ data }: Props) => {
+  const { id } = data
+
+  const jsx = (
+    <main className="main">
+      <p>Main: {id}</p>
+    </main>
+  )
+
+  return jsx
+}
+
+export default Main

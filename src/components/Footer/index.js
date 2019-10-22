@@ -1,34 +1,31 @@
-import React from 'react';
-import './styles.css';
+// @flow
 
-import { StaticQuery, graphql } from 'gatsby';
+import React from 'react'
+import './styles.css'
+import { StaticQuery, graphql } from 'gatsby'
+import type { FooterTypes } from '../../types.js'
 
-const Footer = ({ data }) => {
-
-    const { id } = data;
-    
-    const jsx = (
-        <footer
-        className='Footer'
-        >
-            Footer: {id}
-        </footer>
-    )
-
-    return jsx;
+type Props = {
+  data: FooterTypes,
 }
 
-export default props => (
-    <StaticQuery
-        query={query}
-        render={data => <Footer data={data} {...props}></Footer>}
-    />
-)
+const Footer = ({ data }: Props) => {
+  const { id } = data
+  const jsx = <footer className="Footer">Footer: {id}</footer>
+
+  return jsx
+}
 
 export const query = graphql`
-{
-	contentfulFooter {
-        id
-	}
-}
+  {
+    contentfulFooter {
+      id
+    }
+  }
 `
+
+const Static = () => (
+  <StaticQuery query={query} render={data => <Footer data={data}></Footer>} />
+)
+
+export default Static

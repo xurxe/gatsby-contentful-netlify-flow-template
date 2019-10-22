@@ -1,10 +1,10 @@
-# Integrify Design Bootcamp
+# Title
 
 Description.
 
 ## Demo
 
-Coming soon.
+Link.
 
 ## Technologies and tools
 
@@ -12,6 +12,7 @@ Coming soon.
 - Gatsby
 - Contentful
 - GraphQL
+- Flow
 - Netlify
 
 ## Authors
@@ -24,4 +25,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-Coming soon.
+List.
